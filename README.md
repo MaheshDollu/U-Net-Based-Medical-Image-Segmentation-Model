@@ -182,16 +182,27 @@ if images.size > 0 and masks.size > 0:
     # Calculate accuracy (or any other metric)
     accuracy = accuracy_score(y_val.flatten(), val_predictions.flatten())
     print(f'Validation accuracy: {accuracy:.2f}')
+
 else:
+
     print("No data to process. Please check your directories.")
+
 Synthetic Data Creation: Calls the function to generate synthetic images and masks.
+
 Data Loading: Loads the generated images and masks into memory.
+
 Data Check: Ensures there is data to process before proceeding.
+
 Data Splitting: Uses train_test_split to divide the data into training and validation sets.
+
 Data Augmentation: Sets up an ImageDataGenerator to apply real-time data augmentation during training.
+
 Model Compilation: Compiles the U-Net model with the Adam optimizer and binary cross-entropy loss.
+
 Model Training: Trains the model using the augmented data generator, validating on the validation set.
+
 Model Evaluation: Predicts on the validation set and calculates accuracy, printing the result.
-Summary
+
+# Summary
 This code provides a full pipeline for generating synthetic medical images, constructing a U-Net model for segmentation, training the model with augmented data, and evaluating its performance. It can be adapted for real medical image datasets by replacing the synthetic data generation with actual data loading and preprocessing.
 
