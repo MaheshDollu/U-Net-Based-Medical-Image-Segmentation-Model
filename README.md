@@ -183,9 +183,9 @@ if images.size > 0 and masks.size > 0:
     accuracy = accuracy_score(y_val.flatten(), val_predictions.flatten())
     print(f'Validation accuracy: {accuracy:.2f}')
 
-else:
+    else:
 
-    print("No data to process. Please check your directories.")
+        print("No data to process. Please check your directories.")
 
 Synthetic Data Creation: Calls the function to generate synthetic images and masks.
 
